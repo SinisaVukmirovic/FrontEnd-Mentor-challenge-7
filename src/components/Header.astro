@@ -1,0 +1,24 @@
+---
+// import Nav from './header-elems/Nav.astro';
+import heroImg from '/imgs/illustration-intro.png';
+---
+
+<header>    
+    <img class="hero-img" src={heroImg} alt="Illustration">
+
+    <h2>All your files in one secure location, accessible anywhere.</h2>
+
+    <p>Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
+</header>
+
+<style>
+    header {
+        padding: 2rem;
+    }
+
+    .hero-img {
+        display: block;
+        max-width: 80%;
+        margin: 2rem auto;
+    }
+</style>

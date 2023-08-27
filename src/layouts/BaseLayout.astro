@@ -1,5 +1,8 @@
 ---
+import '../styles/global.css';
 
+import Nav from '.components/Nav.astro';
+import Header from '../components/Header.astro';
 ---
 
 <html lang="en">
@@ -9,10 +12,23 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Fylo Dark Theme Landing Page</title>
+        
 	</head>
 	<body>
+        <h1 class="hidden">Fylo Dark Theme Landing Page<h1>
+
+        </Nav />
+
+        <Header />
 
         <slot />
 		
 	</body>
 </html>
+
+<style>
+    .hidden {
+        position: absolute;
+        left: -500%;
+    }
+</style>

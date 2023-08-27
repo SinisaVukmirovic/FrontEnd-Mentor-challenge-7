@@ -1,0 +1,33 @@
+---
+import logo from '/imgs/logo.svg';
+---
+
+<nav>
+    <a href="#" class="logo">
+        <img src={logo} alt="Logo">
+    </a>
+    <ul class="nav-links">
+        <a href="#">Features</a>
+        <a href="#">Team</a>
+        <a href="#">Sign In</a>
+    </ul>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .logo img {
+        max-width: 5rem;
+        flex: 1;
+    }
+
+    .nav-links a {
+        font-size: .9rem;
+        padding: .5rem 1rem;
+    }
+</style>
