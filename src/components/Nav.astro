@@ -7,9 +7,15 @@ import logo from '/imgs/logo.svg';
         <img src={logo} alt="Logo">
     </a>
     <ul class="nav-links">
-        <a href="#">Features</a>
-        <a href="#">Team</a>
-        <a href="#">Sign In</a>
+        <li>
+            <a href="#">Features</a>
+        </li>
+        <li>
+            <a href="#">Team</a>
+        </li>
+        <li>
+            <a href="#">Sign In</a>
+        </li>
     </ul>
 </nav>
 
@@ -26,8 +32,15 @@ import logo from '/imgs/logo.svg';
         flex: 1;
     }
 
+    .nav-links {
+        display: flex;
+    }
+    
+    .nav-links li {
+        padding: .5rem 1rem;
+    }
+
     .nav-links a {
         font-size: .9rem;
-        padding: .5rem 1rem;
     }
 </style>

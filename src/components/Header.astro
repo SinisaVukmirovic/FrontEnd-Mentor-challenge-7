@@ -1,24 +1,53 @@
 ---
-// import Nav from './header-elems/Nav.astro';
 import heroImg from '/imgs/illustration-intro.png';
 ---
 
 <header>    
+    <h1 class="hidden">Fylo Dark Theme Landing Page<h1>
+
     <img class="hero-img" src={heroImg} alt="Illustration">
 
     <h2>All your files in one secure location, accessible anywhere.</h2>
 
     <p>Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
+
+    <button>Get Started</button>
 </header>
 
 <style>
+    .hidden {
+        position: absolute;
+        left: -500%;
+    }
+
     header {
         padding: 2rem;
+        text-align: center;
     }
 
     .hero-img {
         display: block;
-        max-width: 80%;
-        margin: 2rem auto;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        line-height: 1.5;
+        margin: 1.5rem 0;
+    }
+
+    p {
+        line-height: 1.5;
+        padding: 0 1rem;
+    }
+
+    button {
+        padding: 1rem 5rem;
+        border-radius: 10rem;
+        outline: none;
+        border: none;
+        background-color: cyan;
+        color: #eee;
+        margin: 2rem 0;
     }
 </style>
