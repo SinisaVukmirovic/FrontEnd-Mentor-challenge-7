@@ -1,0 +1,56 @@
+---
+const servicesCards = [
+    {
+        src: '/imgs/icon-access-anywhere.svg',
+        headline: 'Access your files, anywhere',
+        text: 'The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.'
+    },
+    {
+        src: '/imgs/icon-security.svg',
+        headline: 'Security you can trust',
+        text: '2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.'
+    },
+    {
+        src: '/imgs/icon-collaboration.svg',
+        headline: 'Real-time collaboration',
+        text: 'Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.'
+    },
+    {
+        src: '/imgs/icon-any-file.svg',
+        headline: 'Store any type of file',
+        text: 'Whether you\'re sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.'
+    },
+]
+---
+
+{servicesCards.map(card => (
+    <section class="services">
+        <div class="service-card">
+            <img src={card.src} alt="Icon">
+            <h3>{card.headline}</h3>
+            <p>{card.text}</p>
+        </div>
+    </section>
+))}
+
+<style>
+    .services {
+        padding: 2rem;
+        // margin: 3rem 0;
+    }
+
+    .service-card {
+        text-align: center;
+        padding: 1rem 0;
+        // margin: 3rem 0;
+
+        & img {
+            max-width: 3.75rem;
+            margin: 0 auto;
+        }
+
+        & h3 {
+            margin: 2rem 0 1rem;
+        }
+    }
+</style>
