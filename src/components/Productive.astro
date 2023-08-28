@@ -1,0 +1,55 @@
+---
+const productiveImg = '/imgs/illustration-stay-productive.png';
+const iconArrow = '/imgs/icon-arrow.svg';
+---
+
+<section class="productive">
+    <img src={productiveImg} alt="Graphic image">
+    <h3>Stay productive, wherever you are</h3>
+    <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
+    <br />
+    <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+    <span class="cta">
+        <a href="#">See how Fylo works <img src={iconArrow} alt="Icon"></a>
+    </span>
+</section>
+
+<style>
+    .productive {
+        padding: 7rem 2rem;
+
+        & h3 {
+            text-align: center;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            margin: 2rem 0 1rem;
+
+        }
+
+        & p {
+            line-height: 1.5;
+        }
+
+        & .cta {
+            display: inline-block;
+            color: var(--Cyan-cta);
+            margin-top: 1rem;
+            padding: .2rem 0;
+
+            border-bottom: 1px solid var(--Cyan-cta);
+            width: fit-content;
+            cursor: pointer;
+
+            & a {
+                display: flex;
+                align-items: center;
+                font-size: .8rem;
+            }
+
+            & img {
+                display: inline-block;
+                margin-left: .5rem;
+            }
+        }
+    }
+</style>

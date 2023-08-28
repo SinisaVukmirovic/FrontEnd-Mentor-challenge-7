@@ -23,11 +23,13 @@ import heroImg from '/imgs/illustration-intro.png';
     header {
         padding: 2rem;
         text-align: center;
-        background-color: var(--Dark-Blue-intro);
-        background-image: url('/imgs/bg-curvy-mobile.svg');
+        background: url('/imgs/bg-curvy-mobile.svg'), 
+                    linear-gradient(var(--Dark-Blue-intro) 55%, var(--Dark-Blue-main-bg) 45%);
+        /* background-color: var(--Dark-Blue-intro); */
+        /* background-image: url('/imgs/bg-curvy-mobile.svg'); */
         background-repeat: no-repeat;
-        background-position: center bottom;
-        background-size: cover;
+        background-position: center 45%;
+        background-size: contain;
     }
 
     .hero-img {
