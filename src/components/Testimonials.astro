@@ -1,0 +1,79 @@
+---
+const testimonials = [
+    {
+        text: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
+        img: '/imgs/profile-1.jpg',
+        name: 'Satish Patel',
+        title: 'Founder & CEO, Huddle'
+    },
+    {
+        text: 'Fylo has improved our team by an order of magnitude. Since making the switch our team has become a well-oiled machine.',
+        img: '/imgs/profile-2.jpg',
+        name: 'Bruce McKenzie',
+        title: 'Employee at Huddle'
+    },
+    {
+        text: 'Fylo has improved our team productivity by an order of magnitude. The switch our team has become a big plus in our productivity.',
+        img: '/imgs/profile-3.jpg',
+        name: 'Satish Patel',
+        title: 'Founder & CEO, Huddle'
+    }
+]
+---
+
+<section class="testimonials">
+    {testimonials.map(testimonial => (
+        <div class="testimonial">
+            <p class="text">{testimonial.text}</p>
+            <div class="user">
+                <img src={testimonial.img} alt="User avatar">
+                <p class="user-name">{testimonial.name}</p>
+                <p class="user-title">{testimonial.title}</p>
+            </div>
+        </div>
+    ))}
+</section>
+
+<style>
+    .testimonials {
+        background-color: var(--Dark-Blue-intro);
+        padding: 2rem;
+    }
+
+    .testimonial {
+        background-color: var(--Dark-Blue-main-bg);
+        padding: 1.5rem;
+        margin: 1.5rem 1rem;
+    }
+
+    .text {
+        font-size: .8rem;
+        line-height: 1.6;
+    }
+
+    .user {
+        display: grid;
+        grid-template-columns: min-content;
+        grid-template-areas: 
+        'I N'
+        'I T';
+        margin: 1rem 0;
+
+        & img {
+            grid-area: I;
+            max-width: 2.5rem;
+            margin-right: 1rem;
+            display: block;
+            border-radius: 100%;
+        }
+        & .user-name {
+            grid-area: N;
+            font-size: .9rem;
+            font-weight: 700;
+        }
+        & .user-title {
+            grid-area: T;
+            font-size: .7rem;
+        }
+    }
+</style>
