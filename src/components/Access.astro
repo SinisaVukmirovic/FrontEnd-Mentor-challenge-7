@@ -13,9 +13,11 @@
 
 <style>
     .access {
+        position: relative;
+        z-index: 2;
         background-color: var(--Dark-Blue-intro);
         padding: 2rem;
-        margin: 5rem 1.5rem;
+        margin: 8rem 1.5rem -12rem;
         text-align: center;
 
         & p {
@@ -40,6 +42,11 @@
     button {
         background-color: var(--Blue-cta);
         color: var(--White);
+
+        &:hover {
+            background-color: var(--Cyan-cta);
+            color: var(--Dark-Blue-main-bg);
+        }
     }
 </style>
 

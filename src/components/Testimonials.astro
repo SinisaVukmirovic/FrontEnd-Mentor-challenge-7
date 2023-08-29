@@ -37,8 +37,23 @@ const testimonials = [
 <style>
     .testimonials {
         background-color: var(--Dark-Blue-intro);
-        padding: 2rem;
+        padding: 3rem 2rem;
+        position: relative;
     }
+        .testimonials::before,
+        .testimonials::after {
+            position: absolute;
+            content: url('/imgs/bg-quotes.png');
+            opacity: .25;
+        }
+        .testimonials::before {
+            top: -1.5rem;
+            left: 1.5rem;
+        }
+        .testimonials::after {
+            bottom: -1.5rem;
+            right: 1.5rem;
+        }
 
     .testimonial {
         background-color: var(--Dark-Blue-main-bg);

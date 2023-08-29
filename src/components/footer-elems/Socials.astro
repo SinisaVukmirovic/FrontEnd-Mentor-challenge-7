@@ -1,8 +1,8 @@
 ---
 const socialLinks = [
-    { icon: 'https://s2.svgbox.net/materialui.svg?ic=facebook' },
-    { icon: 'https://s2.svgbox.net/social.svg?ic=twitter' },
-    { icon: 'https://s2.svgbox.net/social.svg?ic=instagram' }
+    { icon: 'imgs/social-icons/facebook.svg' },
+    { icon: 'imgs/social-icons/twitter.svg' },
+    { icon: 'imgs/social-icons/instagram.svg' }
 ];
 ---
 
@@ -23,6 +23,11 @@ const socialLinks = [
         border: 1px solid var(--White);
         border-radius: 100%;
         margin: 0.5rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--Blue-cta);
+        }
     }
     img {
         width: 1rem;

@@ -30,18 +30,36 @@ const detailIcons = {
     </div>
 
     <Links />
+
+    <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#https://www.frontendmentor.io/profile/SinisaVukmirovic" target="_blank">SinisaVukmirovic</a>.
+    </p>
 </footer>
 
 <style>
     footer {
-        padding: 2rem;
+        padding: 18rem 2rem 0;
         background-color: var(--Dark-Blue-footer-bg);
     }
 
     .details {
-        padding: 1rem 0;
+        padding: 3rem 0;
         display: grid;
         grid-template-columns: auto 1fr;
-        gap: 1rem;
+        row-gap: 2rem;
+        column-gap: 1rem;
+    }
+
+    .attribution {
+        text-align: center;
+        font-size: .7rem;
+        margin-top: 2rem;
+        padding: .5rem;
+        border-top: 2px solid var(--Dark-Blue-intro);
+
+        & a {
+            color: var(--Blue-cta);
+        }
     }
 </style>

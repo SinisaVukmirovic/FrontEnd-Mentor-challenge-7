@@ -10,13 +10,13 @@ const iconArrow = '/imgs/icon-arrow.svg';
     <br />
     <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
     <span class="cta">
-        <a href="https://www.frontendmentor.io/profile/SinisaVukmirovic">See how Fylo works <img src={iconArrow} alt="Icon"></a>
+        <a href="https://www.frontendmentor.io/profile/SinisaVukmirovic" target="_blank">See how Fylo works <img src={iconArrow} alt="Icon"></a>
     </span>
 </section>
 
 <style>
     .productive {
-        padding: 7rem 2rem;
+        padding: 10rem 2rem;
 
         & h3 {
             text-align: center;
@@ -51,5 +51,9 @@ const iconArrow = '/imgs/icon-arrow.svg';
                 margin-left: .5rem;
             }
         }
+    }
+
+    .cta:hover {
+        color: var(--Blue-cta);
     }
 </style>
