@@ -1,0 +1,30 @@
+---
+const socialLinks = [
+    { icon: 'https://s2.svgbox.net/materialui.svg?ic=facebook' },
+    { icon: 'https://s2.svgbox.net/social.svg?ic=twitter' },
+    { icon: 'https://s2.svgbox.net/social.svg?ic=instagram' }
+];
+---
+
+<ul class="socials">
+    {socialLinks.map(soc => (
+        <li><img src={soc.icon} alt="Icon"></li>
+    ))}
+</ul>
+
+<style>
+    .socials {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+    }
+    li {
+        padding: .5rem;
+        border: 1px solid var(--White);
+        border-radius: 100%;
+        margin: 0.5rem;
+    }
+    img {
+        width: 1rem;
+    }
+</style>

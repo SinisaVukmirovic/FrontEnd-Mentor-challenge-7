@@ -1,0 +1,47 @@
+---
+import logo from '/imgs/logo.svg';
+
+import Links from './footer-elems/Links.astro';
+
+const detailIcons = {
+        location: 'imgs/icon-location.svg',
+        phone: 'imgs/icon-phone.svg',
+        email: 'imgs/icon-email.svg',
+    }
+---
+
+<footer>
+    <a href="#" class="logo">
+        <img src={logo} alt="Logo">
+    </a>
+    <div class="details">
+        <span class="icon">
+            <img src={detailIcons.location} alt="Icon">
+        </span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        <span class="icon">
+            <img src={detailIcons.phone} alt="Icon">
+        </span>
+        <p>+1-543-123-4567</p>
+        <span class="icon">
+            <img src={detailIcons.email} alt="Icon">
+        </span>
+        <p>example@fylo.com</p>
+    </div>
+
+    <Links />
+</footer>
+
+<style>
+    footer {
+        padding: 2rem;
+        background-color: var(--Dark-Blue-footer-bg);
+    }
+
+    .details {
+        padding: 1rem 0;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+    }
+</style>

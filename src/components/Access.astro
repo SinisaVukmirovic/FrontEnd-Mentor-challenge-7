@@ -29,7 +29,7 @@
         width: 100%;
         margin: 1rem auto;
         border-radius: 10rem;
-        /* outline: none; */
+        outline: none;
         border: none;
     }
 
@@ -54,5 +54,10 @@
         if (!correctInput) {
             emailInput.style.outline = '3px solid var(--Light-Red)';
         }
+    });
+
+    emailInput.addEventListener("focusout", () => {
+        emailInput.value = '';
+        emailInput.style.outline = 'none';
     });
 </script>

@@ -1,0 +1,38 @@
+---
+import Socials from "./Socials.astro";
+
+const linksOne = [
+    { text: 'About Us' },
+    { text: 'Jobs' },
+    { text: 'Press' },
+    { text: 'Blog' }
+]
+
+const linksTwo = [
+    { text: 'Contact Us' },
+    { text: 'Terms' },
+    { text: 'Privacy' }
+];
+---
+
+<div class="links">
+    <ul class="list">
+        {linksOne.map(link => (
+            <li>{link.text}</li>
+        ))}
+    </ul>
+    <ul class="list">
+        {linksTwo.map(link => (
+            <li>{link.text}</li>
+        ))}
+    </ul>
+
+    <Socials />
+
+</div>
+
+<style>
+    .list {
+        margin: 1rem 0;
+    }
+</style>
