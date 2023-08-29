@@ -1,0 +1,58 @@
+---
+
+---
+
+<section class="access">
+    <h3>Get early access today</h3>
+    <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+    <form>
+        <input type="email" name="email" id="email" placeholder="email@example.com">
+        <button>Get Started For Free</button>
+    </form>
+</section>
+
+<style>
+    .access {
+        background-color: var(--Dark-Blue-intro);
+        padding: 2rem;
+        margin: 5rem 1.5rem;
+        text-align: center;
+
+        & p {
+            margin: 1rem 0;
+        }
+    }
+
+    input,
+    button {
+        padding: 1rem 2rem;
+        width: 100%;
+        margin: 1rem auto;
+        border-radius: 10rem;
+        /* outline: none; */
+        border: none;
+    }
+
+    input::placeholder {
+        color: rgba(0, 0, 0, .5);
+    }
+
+    button {
+        background-color: var(--Blue-cta);
+        color: var(--White);
+    }
+</style>
+
+<script>
+    const form = document.querySelector('form');
+    const emailInput = form.querySelector('input');
+    const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,6})(\.[a-z]{2,6})?$/;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const correctInput = emailRegex.test(emailInput.value);
+        if (!correctInput) {
+            emailInput.style.outline = '3px solid var(--Light-Red)';
+        }
+    });
+</script>
