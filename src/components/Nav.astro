@@ -1,5 +1,20 @@
 ---
 import logo from '/imgs/logo.svg';
+
+const links = [
+    {
+        href: '#',
+        text: 'Features'
+    },
+    {
+        href: '#',
+        text: 'Team'
+    },
+    {
+        href: '#',
+        text: 'Sign In'
+    }
+];
 ---
 
 <nav>
@@ -7,15 +22,11 @@ import logo from '/imgs/logo.svg';
         <img src={logo} alt="Logo">
     </a>
     <ul class="nav-links">
-        <li>
-            <a href="#">Features</a>
-        </li>
-        <li>
-            <a href="#">Team</a>
-        </li>
-        <li>
-            <a href="#">Sign In</a>
-        </li>
+        {links.map(link => (
+            <li>
+                <a href={link.href}>{link.text}</a>
+            </li>
+        ))}
     </ul>
 </nav>
 
@@ -38,6 +49,7 @@ import logo from '/imgs/logo.svg';
     
     .nav-links li {
         padding: .5rem 1rem;
+        margin: 0 1rem;
     }
 
     .nav-links a {

@@ -23,7 +23,7 @@ const iconArrow = '/imgs/icon-arrow.svg';
         padding: 10rem 2rem;
 
         & img.prod-img {
-            animation: fadeIn 1.5s ease-out;
+            animation: fadeIn 1s ease-out;
         }
 
         & h3 {
@@ -46,6 +46,7 @@ const iconArrow = '/imgs/icon-arrow.svg';
             border-bottom: 1px solid var(--Cyan-cta);
             width: fit-content;
             cursor: pointer;
+            transition: border 250ms ease-in-out;
 
             & a {
                 display: flex;
@@ -61,7 +62,8 @@ const iconArrow = '/imgs/icon-arrow.svg';
     }
 
     .cta:hover {
-        color: var(--Blue-cta);
+        color: var(--White);
+        border-bottom: 1px solid var(--White);
     }
 
     @media (min-width: 1440px) {

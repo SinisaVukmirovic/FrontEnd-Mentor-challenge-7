@@ -94,4 +94,23 @@ const testimonials = [
             font-size: .7rem;
         }
     }
+
+    @media (min-width: 1440px) {
+        .testimonials {
+            display: flex;
+            padding: 3rem 10%;
+        }
+
+        .testimonial {
+            flex: 1;            
+        }
+
+        .testimonials::before {
+            left: 6rem;
+        }
+
+        .testimonials::after {
+            right: 6rem;
+        }
+    }
 </style>

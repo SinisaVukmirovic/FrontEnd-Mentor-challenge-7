@@ -64,9 +64,17 @@ import heroImg from '/imgs/illustration-intro.png';
     }
 
     @media (min-width: 1440px) {
+        header {
+            background: url('/imgs/bg-curvy-mobile.svg'), 
+                        linear-gradient(var(--Dark-Blue-intro) 95%, var(--Dark-Blue-main-bg) 5%);
+            background-repeat: no-repeat;
+            background-position: center 100%;
+            background-size: contain;
+        }
+
         .hero-img {
             width: 40rem;
-            margin: 5rem auto 2rem;
+            margin: 2rem auto 2rem;
         }
 
         h2 {
@@ -74,6 +82,7 @@ import heroImg from '/imgs/illustration-intro.png';
             text-align: center;
             display: inline-block;  /* ??? */
             width: 35ch;
+            line-height: 1.6;
         }
 
         p {

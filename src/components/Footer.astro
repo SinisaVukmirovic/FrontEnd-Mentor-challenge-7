@@ -19,6 +19,7 @@ const detailIcons = {
             <img src={detailIcons.location} alt="Icon">
         </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+
         <span class="icon">
             <img src={detailIcons.phone} alt="Icon">
         </span>
@@ -60,6 +61,16 @@ const detailIcons = {
 
         & a {
             color: var(--Blue-cta);
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .details {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas: 
+                'T P'
+                'T M';
         }
     }
 </style>
