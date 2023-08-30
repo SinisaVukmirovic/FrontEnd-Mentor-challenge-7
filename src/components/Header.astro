@@ -5,7 +5,7 @@ import heroImg from '/imgs/illustration-intro.png';
 <header>    
     <h1 class="hidden">Fylo Dark Theme Landing Page<h1>
 
-    <img class="hero-img" src={heroImg} alt="Illustration">
+    <img class="hero-img" src={heroImg} alt="Illustration" height="236px">
 
     <h2>All your files in one secure location, accessible anywhere.</h2>
 
@@ -30,22 +30,22 @@ import heroImg from '/imgs/illustration-intro.png';
         background-repeat: no-repeat;
         background-position: center 45%;
         background-size: contain;
-    }
 
-    .hero-img {
-        display: block;
-        max-width: 100%;
-    }
+        & .hero-img {
+            display: block;
+            max-width: 100%;
+        }
 
-    h2 {
-        font-size: 1.6rem;
-        line-height: 1.5;
-        margin: 1.5rem 0;
-    }
+        & h2 {
+            font-size: 1.6rem;
+            line-height: 1.5;
+            margin: 1.5rem 0;
+        }
 
-    p {
-        line-height: 1.5;
-        padding: 0 1rem;
+        & p {
+            line-height: 1.5;
+            padding: 0 1rem;
+        }
     }
 
     button {

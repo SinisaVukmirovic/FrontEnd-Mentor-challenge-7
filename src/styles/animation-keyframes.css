@@ -1,0 +1,20 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        scale: .8;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

@@ -4,7 +4,7 @@ const iconArrow = '/imgs/icon-arrow.svg';
 ---
 
 <section class="productive">
-    <img src={productiveImg} alt="Graphic image">
+    <img src={productiveImg} alt="Graphic image" loading="lazy" height="241px">
     <h3>Stay productive, wherever you are</h3>
     <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
     <br />
@@ -18,12 +18,15 @@ const iconArrow = '/imgs/icon-arrow.svg';
     .productive {
         padding: 10rem 2rem;
 
+        & img {
+            animation: fadeIn 1.5s ease-out;
+        }
+
         & h3 {
             text-align: center;
             font-size: 1.2rem;
             letter-spacing: 1px;
             margin: 2rem 0 1rem;
-
         }
 
         & p {
