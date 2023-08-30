@@ -4,8 +4,8 @@ import heroImg from '/imgs/illustration-intro.png';
 
 <header>    
     <h1 class="hidden">Fylo Dark Theme Landing Page<h1>
-
-    <img class="hero-img" src={heroImg} alt="Illustration" height="236px">
+        
+    <img class="hero-img" src={heroImg} alt="Illustration">
 
     <h2>All your files in one secure location, accessible anywhere.</h2>
 
@@ -36,7 +36,7 @@ import heroImg from '/imgs/illustration-intro.png';
             max-width: 100%;
         }
 
-        & h2 {
+        & h2.headline {
             font-size: 1.6rem;
             line-height: 1.5;
             margin: 1.5rem 0;
@@ -60,6 +60,25 @@ import heroImg from '/imgs/illustration-intro.png';
         &:hover {
             background-color: var(--Cyan-cta);
             color: var(--Dark-Blue-main-bg);
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .hero-img {
+            width: 40rem;
+            margin: 5rem auto 2rem;
+        }
+
+        h2 {
+            font-size: 2rem !important;
+            text-align: center;
+            display: inline-block;  /* ??? */
+            width: 35ch;
+        }
+
+        p {
+            width: 55ch;
+            margin: 2rem auto 0;
         }
     }
 </style>

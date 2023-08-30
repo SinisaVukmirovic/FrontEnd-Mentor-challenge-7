@@ -23,15 +23,15 @@ const servicesCards = [
 ]
 ---
 
-{servicesCards.map(card => (
-    <section class="services">
+<section class="services">
+    {servicesCards.map(card => (
         <div class="service-card">
             <img src={card.src} alt="Icon">
             <h3>{card.headline}</h3>
             <p>{card.text}</p>
         </div>
-    </section>
-))}
+    ))}
+</section>
 
 <style>
     .services {
@@ -40,9 +40,10 @@ const servicesCards = [
 
     .service-card {
         text-align: center;
+        padding: 3rem 2rem;
 
         & img {
-            max-width: 4rem;
+            height: 4rem;
             margin: 0 auto;
         }
 
@@ -52,6 +53,15 @@ const servicesCards = [
 
         & p {
             font-size: .9rem;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .services {
+            padding: 5rem 15%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 5rem;
         }
     }
 </style>

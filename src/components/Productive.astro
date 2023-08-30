@@ -4,21 +4,25 @@ const iconArrow = '/imgs/icon-arrow.svg';
 ---
 
 <section class="productive">
-    <img src={productiveImg} alt="Graphic image" loading="lazy" height="241px">
-    <h3>Stay productive, wherever you are</h3>
-    <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
-    <br />
-    <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
-    <span class="cta">
-        <a href="https://www.frontendmentor.io/profile/SinisaVukmirovic" target="_blank">See how Fylo works <img src={iconArrow} alt="Icon"></a>
-    </span>
+    <div>
+        <img class="prod-img" src={productiveImg} alt="Graphic image" loading="lazy" height="241px">
+    </div>
+    <div>
+        <h3>Stay productive, wherever you are</h3>
+        <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
+        <br />
+        <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+        <span class="cta">
+            <a href="https://www.frontendmentor.io/profile/SinisaVukmirovic" target="_blank">See how Fylo works <img src={iconArrow} alt="Icon"></a>
+        </span>
+    </div>
 </section>
 
 <style>
     .productive {
         padding: 10rem 2rem;
 
-        & img {
+        & img.prod-img {
             animation: fadeIn 1.5s ease-out;
         }
 
@@ -58,5 +62,27 @@ const iconArrow = '/imgs/icon-arrow.svg';
 
     .cta:hover {
         color: var(--Blue-cta);
+    }
+
+    @media (min-width: 1440px) {
+        .productive {
+            padding: 10rem 10%;
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+
+            & img.prod-img {
+                width: 100%;
+                height: 100%;
+                /* animation: fadeIn 1.5s ease-out; */
+            }
+
+            & h3 {
+                text-align: left;
+                font-size: 2.2rem;
+                width: 20ch;
+            }
+        }
     }
 </style>

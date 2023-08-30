@@ -25,7 +25,6 @@ import logo from '/imgs/logo.svg';
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
-        /* background-color: var(--Dark-Blue-intro); */
     }
 
     .logo img {
@@ -43,9 +42,21 @@ import logo from '/imgs/logo.svg';
 
     .nav-links a {
         font-size: .9rem;
+        color: var(--Dark-White);
 
         &:hover {
-            color: var(--Cyan-cta);
+            text-decoration: underline;
+            color: var(--White);
+        }
+    }
+
+    @media (min-width: 1440px) {
+        nav {
+            padding: 4rem 5% 1rem;
+        }
+
+        .logo img {
+            max-width: 10rem;
         }
     }
 </style>
