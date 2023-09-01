@@ -5,16 +5,16 @@
     }
 }
 
-@keyframes slideInLeft {
+@keyframes slideInDown {
     from {
-        transform: translateX(-100%);
+        transform: translateY(-100%);
         opacity: 0;
     }
 }
 
-@keyframes slideInRight {
+@keyframes slideInTop{
     from {
-        transform: translateX(100%);
+        transform: translateY(100%);
         opacity: 0;
     }
 }
