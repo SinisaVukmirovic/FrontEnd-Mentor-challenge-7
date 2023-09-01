@@ -5,7 +5,7 @@ const iconArrow = '/imgs/icon-arrow.svg';
 
 <section class="productive">
     <div>
-        <img class="prod-img" src={productiveImg} alt="Graphic image" loading="lazy" height="241px">
+        <img class="prod-img hidden" src={productiveImg} alt="Graphic image" loading="lazy" height="241px">
     </div>
     <div>
         <h3>Stay productive, wherever you are</h3>
@@ -22,8 +22,13 @@ const iconArrow = '/imgs/icon-arrow.svg';
     .productive {
         padding: 10rem 2rem;
 
-        & img.prod-img {
-            animation: fadeIn 1s ease-out;
+        & .prod-img {
+            transition: all 1s ease-out;
+        }
+
+        & .prod-img.hidden {
+            opacity: 0;
+            scale: .5;
         }
 
         & h3 {
@@ -88,3 +93,23 @@ const iconArrow = '/imgs/icon-arrow.svg';
         }
     }
 </style>
+
+<script>
+    const prodImg = document.querySelector('.prod-img');
+
+    const intObsOptions = {
+        threshold: 1
+    };
+
+    const prodImgObs = new IntersectionObserver((entries, intObsOptions) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.remove('hidden');
+            }
+        }, intObsOptions);
+    });
+
+    prodImgObs.observe(prodImg);
+</script>
