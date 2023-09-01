@@ -16,16 +16,22 @@ const linksTwo = [
 ---
 
 <div class="links">
-    <ul class="list">
-        {linksOne.map(link => (
-            <li>{link.text}</li>
-        ))}
-    </ul>
-    <ul class="list">
-        {linksTwo.map(link => (
-            <li>{link.text}</li>
-        ))}
-    </ul>
+    <div class="lists">
+        <ul class="list">
+            {linksOne.map(link => (
+                <li>
+                    <a href="#">{link.text}</a>
+                </li>
+            ))}
+        </ul>
+        <ul class="list">
+            {linksTwo.map(link => (
+                <li>
+                    <a href="#">{link.text}</a>
+                </li>
+            ))}
+        </ul>
+    </div>
 
     <Socials />
 
@@ -38,18 +44,25 @@ const linksTwo = [
         gap: 2rem;
     }
 
+    .lists {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+    }
+
      li {
         margin: .75rem 0;
 
     }
 
-    /* @media (min-width: 1440px) {
+    @media (min-width: 1440px) {
         .links {
-            display: flex;
+            margin-top: 0;
+            grid-template-columns: 2fr 1fr;
 
             & ul {
                 flex: 1;
             }
         }
-    } */
+    }
 </style>

@@ -14,23 +14,68 @@ const detailIcons = {
     <a href="#" class="logo">
         <img src={logo} alt="Logo">
     </a>
-    <div class="details">
-        <span class="icon">
-            <img src={detailIcons.location} alt="Icon">
-        </span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+    <div class="info">
+        <div class="details">
+            <div class="text">
+                <span class="icon">
+                    <img src={detailIcons.location} alt="Icon">
+                </span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            </div>
+            <div class="phone-mail">
+                <div>
+                    <span class="icon">
+                        <img src={detailIcons.phone} alt="Icon">
+                    </span>
+                    <p>+1-543-123-4567</p>
+                </div>
+                <div>
+                    <span class="icon">
+                        <img src={detailIcons.email} alt="Icon">
+                    </span>
+                    <p>example@fylo.com</p>
+                </div>
+            </div>
+        </div>
 
-        <span class="icon">
-            <img src={detailIcons.phone} alt="Icon">
-        </span>
-        <p>+1-543-123-4567</p>
-        <span class="icon">
-            <img src={detailIcons.email} alt="Icon">
-        </span>
-        <p>example@fylo.com</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="details">
+            <div class="T">
+                <span class="icon">
+                    <img src={detailIcons.location} alt="Icon">
+                </span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            </div>
+            <div class="A">
+                <span class="icon">
+                    <img src={detailIcons.phone} alt="Icon">
+                </span>
+                <p>+1-543-123-4567</p>
+            </div>
+            <div class="M">
+                <span class="icon">
+                    <img src={detailIcons.email} alt="Icon">
+                </span>
+                <p>example@fylo.com</p>
+            </div>
+        </div> -->
+
+        <Links />
     </div>
 
-    <Links />
 
     <p class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -44,12 +89,29 @@ const detailIcons = {
         background-color: var(--Dark-Blue-footer-bg);
     }
 
+    .logo {
+        display: block;
+        margin-left: 1rem;
+    }
+
+    .info {
+        margin: 3rem 0;
+    }
+
     .details {
-        padding: 3rem 0;
+        margin: 1rem 0;
+    }
+
+    .text,
+    .phone-mail div {
         display: grid;
-        grid-template-columns: auto 1fr;
-        row-gap: 2rem;
-        column-gap: 1rem;
+        grid-template-columns: 1rem auto;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .text p {
+        font-size: 1.2rem;
     }
 
     .attribution {
@@ -65,12 +127,32 @@ const detailIcons = {
     }
 
     @media (min-width: 1440px) {
+        footer {
+            padding: 10rem 10% 0;
+            background-color: var(--Dark-Blue-footer-bg);
+        }
+
+        .logo {
+            margin-left: 0;
+            width: 6rem;
+        }
+
+        .info {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 7rem;
+            margin: 1rem 0;
+        }
+
         .details {
+            margin: 0;
             display: grid;
             grid-template-columns: 2fr 1fr;
-            grid-template-areas: 
-                'T P'
-                'T M';
+            gap: 5rem;
+
+            & p {
+                font-size: .9rem;
+            }
         }
     }
 </style>
