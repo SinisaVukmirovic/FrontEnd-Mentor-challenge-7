@@ -1,0 +1,53 @@
+---
+import Member from './Member.astro';
+---
+
+
+<section class="team">
+    <h2>Our team</h2>
+
+    <div class="members">
+        <Member />
+    </div>
+</section>
+
+<style>
+    .team {
+        padding: 5rem 1rem;
+        background-color: var(--Dark-Blue-intro);
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 400;
+    }
+    
+    .members {
+        display: grid;
+        gap: 4rem;
+        padding: 2rem;
+        margin: 5rem 2rem;
+        background-color: var(--Dark-Blue-intro);
+    }
+
+    @media (min-width: 768px) {
+        .members {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+    }
+        
+    @media (min-width: 1440px) {
+        .members {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+            max-width: 1100px;
+            margin: 5rem auto;
+        }
+    }
+</style>

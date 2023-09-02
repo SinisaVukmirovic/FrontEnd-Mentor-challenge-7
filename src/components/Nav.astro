@@ -7,7 +7,7 @@ const links = [
         text: 'Features'
     },
     {
-        href: '#',
+        href: '/team',
         text: 'Team'
     },
     {
@@ -18,7 +18,7 @@ const links = [
 ---
 
 <nav>
-    <a href="#" class="logo">
+    <a href="/" class="logo">
         <img src={logo} alt="Logo">
     </a>
     <ul class="nav-links">
@@ -55,6 +55,11 @@ const links = [
         background-color: var(--Blue-cta);
         border-radius: 10rem;
         color: var(--White);
+        transition: all 250ms ease-in-out;
+
+        &:hover {
+            background-color: var(--Cyan-cta);
+        }
     }
 
     .nav-links a {
