@@ -24,6 +24,11 @@
 
 html {
     font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 a {
@@ -66,6 +71,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     color: var(--White);
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
 }
 
 

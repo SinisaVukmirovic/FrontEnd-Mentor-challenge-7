@@ -17,8 +17,6 @@ import Footer from '../components/Footer.astro';
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<div class="theme-toggle"></div>
-
         <Nav />
 
         <slot />
@@ -26,23 +24,3 @@ import Footer from '../components/Footer.astro';
 		<Footer />		
 	</body>
 </html>
-
-<style>
-	.theme-toggle {
-		width: 1rem;
-		height: 1rem;
-		background-color: lime;
-		position: absolute;
-		top: 0;
-		right: 0;
-		cursor: pointer;
-		border-radius: 0 0 0 10rem;
-	}
-
-	@media (min-width: 1440px) {
-		.theme-toggle {
-			width: 2rem;
-			height: 2rem;
-		}
-	}
-</style>

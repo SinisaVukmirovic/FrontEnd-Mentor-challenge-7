@@ -24,6 +24,7 @@ const iconArrow = '/imgs/icon-arrow.svg';
 
         & .prod-img {
             transition: all 1s ease-out;
+            margin: 0 auto;
         }
 
         & .prod-img.hidden {
@@ -69,6 +70,16 @@ const iconArrow = '/imgs/icon-arrow.svg';
     .cta:hover {
         color: var(--White);
         border-bottom: 1px solid var(--White);
+    }
+
+    @media (min-width: 768px) {
+        .productive {
+            padding: 5rem 10%;
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
     }
 
     @media (min-width: 1440px) {
