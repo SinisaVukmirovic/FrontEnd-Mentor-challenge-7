@@ -5,7 +5,7 @@
     }
 }
 
-@keyframes slideInTop{
+@keyframes slideInTop {
     from {
         transform: translateY(100%);
         opacity: 0;
