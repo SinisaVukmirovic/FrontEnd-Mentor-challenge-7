@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [CODE](https://github.com/SinisaVukmirovic/FrontEnd-Mentor-challenge-7)
-- Live Site URL: [DEMO](https://your-live-site-url.com)
+- Live Site URL: [DEMO](https://front-end-mentor-challenge-7-sandy.vercel.app/)
 
 ## My process
 
@@ -44,6 +44,7 @@ Users should be able to:
 
 - Practicing Astro in this project.
 - Learning about the NEW View Transitions API in Astro
+- Learned that View Transition API works by taking a "screenshot" of the current page (!!! how it looks like when page first loads !!!), so any "hidden" elements, like hidden elements that appear only after the scroll, through Intersection Observer removing hidden class for example, will remain hidden after going back to that page.
 
 ### Continued development
 
