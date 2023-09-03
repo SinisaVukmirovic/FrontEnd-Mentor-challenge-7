@@ -1,0 +1,82 @@
+---
+import heroImg from '/imgs/illustration-intro.png';
+---
+<section>
+    <h2>Get started with <span class="accent">Astro View Transitions!</span></h2>
+    <div class="img-and-text">
+        <img transition:name="get-started-img" class="hero-img" src={heroImg} alt="Illustration">
+
+        <div class="text">
+            <h3 transition:name="get-started-headline">All your files in one secure location, accessible anywhere.</h3>
+            <p>Astro supports opt-in, per-page, view transitions with just a few lines of code. View transitions update your page content without the browser’s normal, full-page navigation refresh and provide seamless animations between pages.</p>
+            <p>Astro provides a ViewTransitions routing component that can be added to a single page’s to control page transitions as you navigate away to another page. It provides a lightweight client-side router that intercepts navigation and allows you to customize the transition between pages.</p>
+            <p>Add this component to a reusable .astro component, such as a common head or layout, for animated page transitions across your entire site (SPA mode).
+            <br>       
+            Astro’s view transitions support is powered by the new View Transitions browser API </p>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    section {
+        background-color: var(--Dark-Blue-intro);
+        padding: 3rem 1rem;
+    }
+
+    h2 {
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .accent {
+        color: var(--Blue-cta);
+        font-weight: 700;
+    }
+
+    .img-and-text {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        gap: 3rem;
+    }
+
+    .text {
+        padding: 1rem;
+
+        & h3 {
+            font-size: 1.5rem;
+            padding: 1rem 0;
+        }
+
+        & p {
+            line-height: 1.6;
+            margin: .75rem 0;
+        }
+    }
+
+    @media (min-width: 768px) {
+        section {
+            padding: 2rem 5%;
+        }
+
+        .img-and-text {
+            padding: 2rem;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        section {
+            padding: 5rem 10%;
+        }
+
+        .img-and-text {
+            padding: 3rem;
+            grid-template-columns: 1fr 2fr;
+            gap: 5rem;
+        }
+    }
+</style>
